@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>5 screens page</title>
+
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/libs/control.js"></script>
+<script src="js/libs/jquery-1.11.2.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+
+	var img = new Image();
+	img.src = 'img/loading_black.png';
+
+	$(document).ready(function(){
+	
+		var config = {
+			
+			delays: {
+				delayPageLoading: 2000,
+				delayBeforeWidgets: 1000,
+				delayBetweenWidgets: 1000
+			},
+			
+			menu: [
+				{
+					text: "Page 1",
+					url: "#page1"
+				},
+				{
+					text: "Page 2",
+					url: "#page2"
+				},
+				{
+					text: "Page 3",
+					url: "#page3"
+				},
+				{
+					text: "Page 4",
+					url: "#page4"
+				},
+				{
+					text: "Page 5",
+					url: "#page5"
+				}
+			],
+			
+			pages: [
+				{
+					id: "page1",
+					url: "html/page1.htm",
+					before: [ "<ul id='menu' title='Menu:'></ul>", "<ul id='nav' title='Pages:'></ul>" ]
+				},
+				{
+					id: "page2",
+					url: "html/page2.htm"
+				},
+				{
+					id: "page3",
+					url: "html/page3.htm"
+				},
+				{
+					id: "page4",
+					url: "html/page4.htm"
+				},
+				{
+					id: "page5",
+					url: "html/page5.htm",
+					after: [ "<div id='widgets'><div id='social'><ul title='Likes:'></ul></div><div id='counters'><ul title='Counters:'></ul></div></div>" ]
+				}
+			],
+			
+			widgets: [
+				{
+					id: "GoogleAnalytics",
+					src: "widgets/ga.js"
+				},
+				{
+					id: "clicky",
+					src: "widgets/clicky.js"
+				},
+				{
+					id: "ya",
+					src: "widgets/ya.js"
+				},
+				{
+					id: "hotlog",
+					src: "widgets/hotlog.js"
+				},
+				{
+					id: "liveInternet",
+					src: "widgets/LiveInternet.js"
+				},
+				{
+					id: "googleplus",
+					src: "https://apis.google.com/js/plusone.js",
+					tag: "div",
+					attrs: {
+						id: "googleplus_like",
+						"class": "g-plusone",
+						"data-size": "medium"
+					},
+					social: true
+				},	
+				{
+					id: "twitter",
+					src: "//platform.twitter.com/widgets.js",
+					tag: "a",
+					attrs: {
+						id: "twitter_like",
+						"class": "twitter-share-button",
+						"data-lang": "ru"
+					},
+					social: true
+				},	
+				{
+					id: "vkontakte",
+					src: "//vk.com/js/api/openapi.js?116",
+					tag: "div",
+					attrs: {
+						id: "vk_like"
+					},
+					social: true
+				},
+				{
+					id: "facebook",
+					src: "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&appId=771735166255942&version=v2.0",
+					tag: "div",
+					attrs: {
+						"class": "fb-like",
+						"data-layout": "button_count",
+						"data-action": "like",
+						"data-show-faces": "true",
+						"data-share": "false"
+					},
+					social: true
+				}	
+			]
+			
+		}
+		
+		main.init(config);
+
+	});
+
+</script>
+
+
+</head>
+
+<body>
+</body>
+</html>
